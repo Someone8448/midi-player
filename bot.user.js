@@ -4,7 +4,7 @@
 // @match       https://mppclone.com/*
 // @match       http://mc.hri7566.info:8080/*
 // @match       https://multiplayerpiano.com/*
-// @match       https://mpp.auotplayer.xyz/*
+// @match       https://mpp.autoplayer.xyz/*
 // @match       https://mpp.hyye.tk/*
 // @match       https://mpp.141.lv/*
 // @grant       none
