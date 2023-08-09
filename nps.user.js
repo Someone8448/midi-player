@@ -18,13 +18,15 @@ var recordownnotes = true
 function debounce() { if (!window.MPP || !window.MidiPlayer) {requestAnimationFrame(() => { debounce(); }); return;} startCode(); } debounce(); function startCode() {
   var nps = {nps: {}}
 MPP.client.on('n', msg => {
+    var date = Date.now()
     if (!nps.nps[msg.p]) nps.nps[msg.p] = {}
-    Object.keys(nps.nps[msg.p]).filter(a => Date.now() - 1000 > a).forEach(a => delete nps.nps[msg.p][a])
-    nps.nps[msg.p][Date.now()] = msg.n.filter(n => n.s != 1).length
+    Object.keys(nps.nps[msg.p]).filter(a => date - 1000 > a).forEach(a => delete nps.nps[msg.p][a])
+    nps.nps[msg.p][date] = msg.n.filter(n => n.s != 1).length
 })
 nps.getNps = (id) => {
 if (!nps.nps[id]) return 0
-    Object.keys(nps.nps[id]).filter(a => Date.now() - 1000 > a).forEach(a => delete nps.nps[id][a])
+    var date = Date.now()
+    Object.keys(nps.nps[id]).filter(a => date - 1000 > a).forEach(a => delete nps.nps[id][a])
 var n = 0
 Object.values(nps.nps[id]).forEach(a => n+= a)
 return n
