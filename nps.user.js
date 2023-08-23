@@ -43,6 +43,16 @@ setInterval(() => {
     document.getElementById(`namediv-${p._id}`).prepend(tagDiv);
   })
 },200)
+  MPP.client.on('participant update', p => {
+      if (p._id === MPP.client.user._id && !recordownnotes) return;
+  if ($('#nametag-' + p._id).text().length != 0) return $('#nametag-' + p._id).text(p.tag ? `${p.tag.text} (${nps.getNps(p._id)} NPS)` : `${nps.getNps(p._id)} NPS`)
+  var tagDiv = document.createElement('div')
+    tagDiv.className = 'nametag';
+    tagDiv.id = `nametag-${p._id}`;
+    tagDiv.style['background-color'] = "#00000088";
+    tagDiv.innerText = `${nps.getNps(p._id)} NPS`
+    document.getElementById(`namediv-${p._id}`).prepend(tagDiv);
+})
 if (recordownnotes) {
 var oldplay = MPP.press
 MPP.press = (a,b) => {
