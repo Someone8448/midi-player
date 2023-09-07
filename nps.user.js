@@ -15,7 +15,7 @@
 // @description 8/9/2023, 9:40:10 AM
 // ==/UserScript==
 var recordownnotes = true
-function debounce() { if (!window.MPP || !window.MidiPlayer) {requestAnimationFrame(() => { debounce(); }); return;} startCode(); } debounce(); function startCode() {
+function debounce() { if (!window.MPP) {requestAnimationFrame(() => { debounce(); }); return;} startCode(); } debounce(); function startCode() {
   var nps = {nps: {}}
 MPP.client.on('n', msg => {
     var date = Date.now()
