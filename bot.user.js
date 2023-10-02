@@ -155,7 +155,7 @@ $('#smnbot-menu #smnbot-load').on('click', async () => {
     // Handle the case where no file is selected
     return;
   }
-
+  Player.stop()
   const fileContent = await readFileAsArrayBuffer(file);
   Player.loadArrayBuffer(fileContent);
 });
