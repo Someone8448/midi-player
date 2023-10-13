@@ -7,6 +7,9 @@
 // @match       https://mpp.autoplayer.xyz/*
 // @match       https://mpp.hyye.tk/*
 // @match       https://mpp.141.lv/*
+// @match       https://multiplayerpiano.net/*
+// @match       https://multiplayerpiano.org/*
+// @match       https://mppclone.hri7566.info/*
 // @grant       none
 // @version     1.0
 // @author      someone8448
