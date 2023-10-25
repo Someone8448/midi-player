@@ -2,7 +2,7 @@
 // @name        Smn's MPP Bot
 // @namespace   Violentmonkey Scripts
 // @match       https://mppclone.com/*
-// @match       http://mc.hri7566.info:8080/*
+// @match       https://mpp.8448.space/*
 // @match       https://multiplayerpiano.com/*
 // @match       https://mpp.autoplayer.xyz/*
 // @match       https://mpp.hyye.tk/*
