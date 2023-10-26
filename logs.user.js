@@ -2,13 +2,17 @@
 // @name        Smn's Chat Logger
 // @namespace   Violentmonkey Scripts
 // @match       https://mppclone.com/*
-// @match       http://mc.hri7566.info:8080/*
-// @match       https://smnmpp.hri7566.info/*
+// @match       https://mpp.8448.space/*
 // @match       https://multiplayerpiano.com/*
+// @match       https://multiplayerpiano.net/*
+// @match       https://multiplayerpiano.org/*
+// @match       https://piano.mpp.community/*
 // @match       https://mpp.autoplayer.xyz/*
 // @match       https://mpp.hyye.tk/*
-// @match       https://playground-mpp.hyye.tk/*
-// @match       https://mpp.141.lv/*
+// @match       https://mppclone.hri7566.info/*
+// @match       https://piano.ourworldofpixels.com/*
+// @match       https://mpp.hri7566.info/*
+// @match       https://mppclone.hri7566.info/*
 // @grant       none
 // @version     1.0
 // @author      someone8448
