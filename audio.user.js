@@ -12,6 +12,7 @@
 // @match       https://mppclone.hri7566.info/*
 // @match       https://piano.ourworldofpixels.com/*
 // @match       https://mpp.hri7566.info/*
+// @match       https://mppclone.hri7566.info/*
 // @grant       none
 // @version     1.0
 // @author      -
