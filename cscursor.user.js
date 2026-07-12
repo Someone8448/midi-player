@@ -13,6 +13,7 @@
 if (!client.addons) client.addons = {};
 client.addons.cursor = {ppl: {}, self: {x: 0.5, y: 0.5}};
 client.on('login', () => client.send({m: "guild", type: "+custom", event: "cursor"}));
+if (client.connected()) client.send({m: "guild", type: "+custom", event: "cursor"});
 window.addEventListener('mousemove', msg => {
   //console.log(msg.clientX / window.innerWidth, msg.clientY / window.innerHeight);
   client.addons.cursor.self.x = msg.clientX / window.innerWidth;
@@ -20,7 +21,7 @@ window.addEventListener('mousemove', msg => {
   client.addons.cursor.self.sent = false;
 });
 setInterval(() => {
-  if (!client.connected || !client.channel || client.addons.cursor.self.sent) return;
+  if (!client.connected() || !client.channel || client.addons.cursor.self.sent) return;
   client.send({m: "channel", type: "custom", channel: client.channel, data: {m: "cursor", x: Number(client.addons.cursor.self.x.toFixed(4)), y: Number(client.addons.cursor.self.y.toFixed(4))}});
   client.addons.cursor.self.sent = true;
 }, 50)
